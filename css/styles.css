@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #efefef;
+    --primary-color: #ba1d29;
+}
+
+body {
+    background-color: var(--background-color);
+    padding: 1rem 2rem;
+}
+
+
+
+
