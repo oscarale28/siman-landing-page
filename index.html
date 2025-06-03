@@ -14,8 +14,8 @@
     />
     <title>Almacenes Siman</title>
   </head>
-  <body class="container">
-    <header>
+  <body>
+    <header class="container">
       <div class="logo">
         <img
           src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1748836548/LOGO-SIMAN_erybsx.webp"
@@ -33,7 +33,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="container">
       <div class="main-content">
         <h1>¡Consiente a papá!</h1>
         <p>
@@ -42,5 +42,56 @@
         </p>
       </div>
     </main>
+
+    <section class="container">
+      <h1>Categorías</h1>
+      <div class="categories-grid">
+        <div class="category" id="sports">
+          <h3>Deportes</h3>
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1748911631/soccer-volleyball-baseball-rugby-equipment_kukyhs.png"
+            alt="sports"
+          />
+        </div>
+        <div class="category" id="electronics">
+          <h3>Electrónicos</h3>
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/e_background_removal/f_png/v1748912472/electronics_tmmvyu.webp"
+            alt="electronics"
+          />
+        </div>
+        <div class="category" id="cooking">
+          <h3>Cocina</h3>
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/e_background_removal/f_png/v1748912471/cooking_vxpn59.webp"
+            alt="cooking"
+          />
+        </div>
+        <div class="category" id="selfcare">
+          <h3>Cuidado personal</h3>
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/e_background_removal/f_png/v1748912471/selfcare_skoqhd.webp"
+            alt="selfcare"
+          />
+        </div>
+        <div class="category" id="clothing">
+          <h3>Ropa</h3>
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/e_background_removal/f_png/v1748913589/clothing-1_njlngm.webp"
+            alt="clothing"
+          />
+        </div>
+        <div class="category" id="more">
+          <h3>
+            Más <br />
+            categorías
+          </h3>
+          <span id="more-icon" class="material-icons-outlined"
+            >chevron_right</span
+          >
+        </div>
+      </div>
+    </section>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,8 @@
 
 :root {
     --background-color: #efefef;
-    --primary-color: #ba1d29;
+    --accent-color: #e0e0e0;
+    --primary-color: #ba1c29;
     --secondary-color: #182848;
 }
 
@@ -27,15 +29,14 @@ input {
 
 .container {
     max-width: 90vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    margin: 3rem auto;
 }
 
 h1 {
-    font-size: clamp(3.5rem, 5vw, 5rem);
+    color: var(--primary-color);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 /* HEADER */
@@ -54,7 +55,7 @@ header img {
 
 header .search-bar {
     display: none;
-    background: #e0e0e0;
+    background: var(--accent-color);
     border: none;
     padding: 1rem;
     border-radius: 5rem;
@@ -108,6 +109,9 @@ main {
     color: #fff;
 }
 
+main h1 {
+    color: #fff;
+}
 
 .credisiman-chip {
     max-width: fit-content;
@@ -128,6 +132,94 @@ main p {
     font-weight: 400;
 }
 
+/* END MAIN */
+
+/* CATEGORIES GRID */
+.categories-grid {
+    display: grid;
+    grid-template-areas:
+        "sports"
+        "electronics"
+        "cooking"
+        "selfcare"
+        "clothing"
+        "more";
+    gap: 1.5rem;
+}
+
+.category {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: var(--accent-color);
+    height: 10rem;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category:hover img {
+    transform: scale(1.1);
+}
+
+.category img {
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 300ms ease-in-out;
+}
+
+.category h3 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#sports {
+    grid-area: sports;
+}
+
+#electronics {
+    grid-area: electronics;
+}
+
+#cooking {
+    padding-left: 0;
+    grid-area: cooking;
+    flex-direction: row-reverse;
+}
+
+#selfcare {
+    grid-area: selfcare;
+}
+
+#selfcare img {
+    height: 20rem;
+}
+
+#clothing {
+    grid-area: clothing;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clothing img {
+    height: 15rem;
+}
+
+#more {
+    grid-area: more;
+    justify-content: space-evenly;
+}
+
+#more h3 {
+    color: #929292;
+}
+
+#more #more-icon {
+    font-size: 6rem;
+    color: #929292;
+}
 
 @media (min-width: 769px) {
     header {
@@ -152,5 +244,15 @@ main p {
 
     .main-content {
         max-width: 500px;
+    }
+
+    .categories-grid {
+        grid-template-areas:
+            "sports sports sports electronics cooking cooking"
+            "selfcare clothing clothing clothing clothing more";
+    }
+
+    #clothing {
+        flex-direction: row;
     }
 }
