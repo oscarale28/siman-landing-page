@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1748838259/siman_icon_ohnf2l.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <title>Solicitar Tarjeta Credisiman - Almacenes Siman</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1748836548/LOGO-SIMAN_erybsx.webp"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main id="form-main" class="container">
+      <div class="form-container">
+        <h1>Solicita tu tarjeta Credisiman</h1>
+        <p class="form-description">
+          Completa el formulario con tus datos personales para obtener tu
+          tarjeta Credisiman y disfrutar de todos los beneficios.
+        </p>
+
+        <form class="credisiman-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="fullName">Nombre completo</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="dpi">Número de DPI</label>
+            <input type="text" id="dpi" name="dpi" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Dirección</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="occupation">Ocupación</label>
+            <input type="text" id="occupation" name="occupation" required />
+          </div>
+
+          <div class="form-group">
+            <label for="monthlyIncome">Ingresos mensuales</label>
+            <input
+              placeholder="$"
+              type="number"
+              id="monthlyIncome"
+              name="monthlyIncome"
+              required
+            />
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms"
+              >Acepto los términos y condiciones de la tarjeta Credisiman</label
+            >
+          </div>
+
+          <button type="submit" class="submit-button">
+            Enviar solicitud
+            <span class="material-icons-outlined">arrow_forward</span>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Almacenes Siman</h3>
+          <p>Tu tienda de confianza desde 1921</p>
+        </div>
+        <div class="footer-section newsletter-section">
+          <form class="newsletter-form" action="#" method="POST">
+            <label for="newsletter-email"
+              >Suscríbete para obtener las mejores ofertas</label
+            >
+            <div class="newsletter-input-group">
+              <input
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                placeholder="e-mail"
+                required
+              />
+              <button type="submit">Suscribirme</button>
+            </div>
+          </form>
+          <div class="footer-phone">
+            <span class="material-icons-outlined">call</span>
+            <span class="phone-number">2298-3777</span>
+          </div>
+        </div>
+        <div class="footer-section social-section">
+          <p>Mantente en contacto con nosotros</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-icon">
+              <img
+                src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1749337902/facebook-svgrepo-com_bm4trh.svg"
+                alt=""
+              />
+            </a>
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <img
+                src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1749337902/instagram-svgrepo-com_ipekv3.svg"
+                alt=""
+              />
+            </a>
+            <a href="#" aria-label="YouTube" class="social-icon">
+              <img
+                src="https://res.cloudinary.com/dx2f2mmwb/image/upload/v1749337902/youtube-168-svgrepo-com_c6x94j.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy; 2025 Almacenes Siman El Salvador. Reservados todos
+          los derechos.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
