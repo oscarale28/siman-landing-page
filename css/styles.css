@@ -51,6 +51,7 @@ button {
 button {
     cursor: pointer;
     border-radius: 0.5rem;
+    border: none;
 }
 
 .container {
@@ -346,7 +347,6 @@ main#index-main p {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
@@ -421,6 +421,7 @@ main#index-main p {
 }
 
 .cta-button {
+    border-radius: 0.5rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -532,7 +533,6 @@ main#form-main {
     border: none;
     font-weight: 600;
     font-size: 1.125rem;
-    cursor: pointer;
     transition: transform 200ms ease-in-out, background-color 200ms ease-in-out;
     margin-top: 1rem;
     width: 100%;
@@ -548,93 +548,45 @@ main#form-main {
 .footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 4rem;
+    padding: 2rem 0;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 2rem;
+    max-width: 90vw;
+    margin: 0 auto 2rem auto;
 }
 
 .footer-section {
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .footer-section h3 {
     color: white;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1.75rem, 2vw, 2rem);
 }
 
-.footer-section p {
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.newsletter-form label {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.newsletter-input-group {
-    display: flex;
-    width: 100%;
-    background: #fff;
+.stores-btn {
+    text-decoration: none;
     border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    margin-bottom: 1rem;
-}
-
-.newsletter-input-group input[type="email"] {
-    flex: 1;
-    border: none;
-    padding: 1rem 1.25rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
     font-size: 1rem;
-    background: #fff;
-    color: #222;
-    outline: none;
-}
-
-.newsletter-input-group input[type="email"]::placeholder {
-    color: #b0b0b0;
-}
-
-.newsletter-input-group button {
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 0 2rem;
+    transition: all 0.3s ease-in-out;
+    max-width: fit-content;
     font-weight: 600;
-    font-size: clamp(0.75rem, 2vw, 1rem);
-    cursor: pointer;
-    transition: background 0.2s;
-    border-radius: 0;
-    min-height: 100%;
-    white-space: nowrap;
 }
 
-.newsletter-input-group button:hover {
-    background: #444;
-}
-
-.footer-phone {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-}
-
-.footer-phone .material-icons-outlined {
-    font-size: 1.3rem;
-}
-
-.footer-phone .phone-number {
-    font-weight: bold;
+.stores-btn:hover {
+    background-color: var(--accent-color);
 }
 
 .social-section p {
@@ -669,12 +621,92 @@ main#form-main {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
     text-align: center;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 .footer-bottom p {
     color: #e0e0e0;
     font-size: 0.875rem;
 }
+
+/* SUCURSALES PAGE */
+.sucursales-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sucursales-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto 3rem auto;
+}
+
+.sucursal {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.sucursal h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sucursal p {
+    color: #222;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.maps-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.maps-btn:hover {
+    background: #182848;
+}
+
+.footer-link-sucursales {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--primary-color);
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.footer-link-sucursales:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
 
 @media (width > 768px) {
     header {
@@ -732,7 +764,7 @@ main#form-main {
     }
 
     .footer-content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .credisiman-banner {
@@ -753,5 +785,9 @@ main#form-main {
 
     .banner-content {
         flex: 1;
+    }
+
+    .sucursales-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
