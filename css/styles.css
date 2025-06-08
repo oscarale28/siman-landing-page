@@ -308,7 +308,7 @@ main#index-main p {
 }
 
 .product-name {
-    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     font-weight: 500;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -689,6 +689,7 @@ main#form-main {
     font-size: 1rem;
     transition: background 0.2s, transform 0.2s;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    text-align: center;
 }
 
 .maps-btn:hover {
