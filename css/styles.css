@@ -144,6 +144,15 @@ main#index-main p {
 /* END MAIN */
 
 /* CATEGORIES GRID */
+
+.categories-title,
+.products-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
 .categories-grid {
     display: grid;
     grid-template-areas:
